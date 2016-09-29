@@ -1,17 +1,14 @@
 Encoding: UTF-8
 Package: memoise
 Title: Memoisation of Functions
-Description: Memoisation allows the results of functions to be cached based on input parameters
-    xmemoise offers both local and remote caches, enabling memoisation across computers.
-    Additional cache types include google datastore and amazon aws.
+Description: Description: Cache the results of a function so that when you call it
+    again with the same arguments it returns the pre-computed value.
 Version: 1.0.1
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = "aut"),
     person("Jim", "Hester", , "jim.hester@rstudio.com", role = c("aut", "cre")),
-    person("Kirill", "MÃ¼ller", , "krlmlr+r@mailbox.org", role = "aut"),
+    person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = "aut"),
     person("Daniel", "Cook", , "danielecook@gmail.com", role = "aut"))
-Description: Cache the results of a function so that when you call it
-    again with the same arguments it returns the pre-computed value.
 URL: https://github.com/danielecook/xmemoise
 BugReports: https://github.com/hadley/memoise/issues
 Imports:
@@ -20,7 +17,8 @@ Imports:
 Suggests:
     testthat,
     googleAuthR,
-    aws.s3
+    aws.s3,
+    rredis
 Remotes:
     cloudyr/aws.s3
 License: MIT + file LICENSE
