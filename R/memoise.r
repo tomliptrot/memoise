@@ -120,8 +120,7 @@ memoise <- memoize <- function(f, ..., envir = environment(f), cache = cache_loc
   memo_f <- eval(
     bquote(function(...) {
       hash <- `_digest`(c(.(list_call),
-          lapply(`_additional`, function(x) eval(x[[2L]], environment(x))),
-          `_f`),
+          lapply(`_additional`, function(x) eval(x[[2L]], environment(x)))),
         algo = "sha512")
 
       if (`_cache`$has_key(hash)) {
